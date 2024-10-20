@@ -1,78 +1,51 @@
-console.log(`Javascript Object Practices`)
+console.log(`Learning About Javascript Object.`);
+// resource link : https://javascript.info/object
+// mdn resource link : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 
-// let user = new Object()
-let user = {}
+const basicAboutObject = () => {
+  console.log(`Bascript Object`);
+  let obj = {name : "raushan"};
 
-// let user = {     // an object
-//     name: "John",  // by key "name" store value "John"
-//     age: 30        // by key "age" store value 30
-//   };
+  // add property
+  obj.address = 'AT Bara Post Ekma Supaul Bihar';
 
-// a = JSON.stringify(user)
-
-// let name = 'Raushan';
-// let keyName = 'name';
-// let user = {
-//     [keyName] : name,
-// }
-
-
-// user[keyName] = name,
-// console.log(user)
+  // check exist property
+  let res = obj.hasOwnProperty('name');
+  res = obj.hasOwnProperty('last_name');
+  // other way
+  res = 'address' in obj
+  // console.log('res', res);
 
 
-// let obj = {
-//     for: 1,
-//     let: 2,
-//     return: 3
-//   };
-// console.log(obj)
-// console.log('for' in obj)
-// console.log('while' in obj)
-// for (key in obj) {
-//     console.log(key)
-//     console.log(obj[key])
-// }
+  // all the object keys
+  let keys = Object.keys(obj);
+  console.log('keys ', keys)
+  // access all the object value
+  let values = Object.values(obj);
+  console.log('values ', values)
+  let keysValues = Object.entries(obj);
+  console.log('keysValues ', keysValues);
+  console.log('________________________________________________________________')
+
+  console.log('obj -> ', Object(obj))
+
+};
 
 
-// Task : https://javascript.info/object
-// 1. solution 
-
-// 2. solution
-// function isEmpty(obj) {
-//     for (key in obj) {
-//         return false
-//     }
-//     return true
-// }
 
 
-// // deep copy
-// user = {
-//     name : 'raushan',
-//     namoe : 'kundan ',
-// }
-
-// let user2 = {
-//     test : 'test'
-// }
-// user2 = Object.assign({}, user)
-
-// user2.name = 'Raushan2'
-
-// console.log(user2)
 
 
-user = {
-    name: "John",
-    sizes: {
-      height: 182,
-      width: 50
-    }
-  };
-  
-let clone = structuredClone( user);
-clone.name = '55'
-// clone['test'] = 'test'
 
-console.log(clone)
+
+
+
+
+
+
+
+
+
+
+// call the function 
+basicAboutObject()
